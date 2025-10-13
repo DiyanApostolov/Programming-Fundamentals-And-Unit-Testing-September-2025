@@ -14,19 +14,19 @@ int power = bombInfo[1];
 
 while (filed.Contains(bombNumber))
 {
-    int bombIndex = filed.IndexOf(bombNumber); // мамираме индекса на бомбата
+    int bombIndex = filed.IndexOf(bombNumber); // намираме индекса на бомбата
 
     int startIndex = bombIndex - power;
     int endIndex = bombIndex + power;
         
     if(startIndex < 0) // правя проверка дали съм излязъл от ляво на листа
     {
-        startIndex = 0; // задаваме стойност на първия индекс
+        startIndex = 0; // задаваме стойност - първи индекс
     }
 
     if(endIndex >= filed.Count) // правя проверка дали съм излязъл от дясно на листа
     {
-        endIndex = filed.Count - 1; // задаваме стойност на последния индекс
+        endIndex = filed.Count - 1; // задаваме стойност - последния индекс
     }
 
     for (int i = startIndex; i <= endIndex; i++)
